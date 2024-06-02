@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+namespace Public;
 class Transactions{
  public float $amount;
  public string $description;
@@ -9,11 +10,11 @@ class Transactions{
         $this->amount = $amount;
         $this->description = $description;
     }
-    public function addTax(float $rate){
-        $this->amount += $this->amount * $rate /100;
+    public function addTax(float $rate):float{
+      return  $this->amount += $this->amount * $rate /100;
     }
 
-    public function addDiscount(float $rate){
-        $this->amount -= $this->amount * $rate / 100;
+    public function addDiscount(float $rate):float{
+       return $this->amount -= $this->amount * $rate / 100;
     }
 }
