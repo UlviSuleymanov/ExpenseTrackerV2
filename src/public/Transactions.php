@@ -1,6 +1,5 @@
 <?php
 declare(strict_types=1);
-namespace Public;
 class Transactions{
  public float $amount;
  public string $description;
